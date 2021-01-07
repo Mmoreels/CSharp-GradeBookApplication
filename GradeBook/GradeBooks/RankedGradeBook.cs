@@ -16,6 +16,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
                 throw new InvalidOperationException("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+            base.CalculateStatistics();
         }
 
         public override char GetLetterGrade(double averageGrade)

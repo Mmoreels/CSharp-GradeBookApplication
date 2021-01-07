@@ -1,5 +1,6 @@
 ﻿using GradeBook.GradeBooks;
 using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace GradeBook.UserInterfaces
@@ -42,6 +43,8 @@ namespace GradeBook.UserInterfaces
             }
             var name = parts[1];
             var type = parts[2].ToLower();
+            var isWeighted = parts[3] as Bool;
+
             BaseGradeBook gradeBook;
             if(type == "standard")
                 gradeBook = new StandardGradeBook(name);

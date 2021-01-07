@@ -18,6 +18,7 @@ namespace GradeBook.GradeBooks
         {
             Name = name;
             Students = new List<Student>();
+            IsWeighted = false;
         }
 
         public void AddStudent(Student student)
